@@ -18,6 +18,12 @@ Luigi.setConfig({
               viewUrl: '/sampleapp.html#/microfrontend/productDetail/:id',
               context: { id: ':id' }
             }]
+          },
+          {
+            pathSegment: 'order',
+            label: 'Order History',
+            icon: 'history',
+            viewUrl: 'http://localhost:8080/index.html'
           }
         ],
       },
