@@ -52,6 +52,7 @@ var defaultLocale = "en-US";
 function myTranslationProvider() {
   var dict = {
     "en-US": { PRODUCTS: "Products", ORDERHISTORY: "Order History" },
+    "de-DE": { PRODUCTS: "Produkte", ORDERHISTORY: "Bestellungen" },
   };
   return {
     getTranslation: function (label, interpolation, locale) {

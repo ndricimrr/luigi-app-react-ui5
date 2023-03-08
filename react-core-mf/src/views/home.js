@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import "../../node_modules/fundamental-styles/dist/fundamental-styles.css";
+import "fundamental-styles/dist/fundamental-styles.css";
 import { addInitListener, addContextUpdateListener, removeContextUpdateListener, removeInitListener, sendCustomMessage } from "@luigi-project/client";
 import { Grid, Panel, Select, Option } from "@ui5/webcomponents-react";
 
 
 const Home = (props) => {
-  // const [message, setMessage] = useState('');
-  // const [initListener, setInitListener] = useState(null);
-  // const [contextUpdateListener, setContextUpdateListener] = useState(null);
-  const [options, setOptions] = useState([{ key: "en-US", text: "en-US" }]);
-  const [locale, setLocale] = useState(props.currentLocale);
+  const [options] = useState([{ key: 'en-US', text: 'en-US' }, { key: 'de-DE', text: 'de-DE' }]);
+  // const [locale, setLocale] = useState(props.currentLocale);
 
   function onChangeValue(event) {
-    setLocale(event.detail.selectedOption.innerText);
+    // setLocale(event.detail.selectedOption.innerText);
     sendCustomMessage({
       id: "set-language",
       locale: event.detail.selectedOption.innerText,
